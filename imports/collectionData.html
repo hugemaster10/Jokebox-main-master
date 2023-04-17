@@ -1,0 +1,12 @@
+<template name="collectionData">
+  <div class="container-1">
+    <h1>My Joke Collection</h1>
+    <ul>
+      {{#each jokes}}
+        <li>{{name}}: {{joke}}</li>
+        {{> starsRating id=_id class='myRating' mutable=true rating=rating size=60}}   
+   
+      {{/each}}
+    </ul>
+  </div>
+</template>
