@@ -1,12 +1,17 @@
-<template name="collectionData">
-  <div class="container-1">
-    <h1>My Joke Collection</h1>
-    <ul>
-      {{#each jokes}}
-        <li>{{name}}: {{joke}}</li>
-        {{> starsRating id=_id class='myRating' mutable=true rating=rating size=60}}   
-   
-      {{/each}}
-    </ul>
-  </div>
-</template>
+  <template name="collectionData">
+    <div class="container-1">
+      <h1>My Joke Collection</h1>
+      <ul>
+        {{#each jokes}}
+          <li>{{name}}: {{joke}}</li>
+            
+    <button class="btn-secondary like-review">
+      <i class="bi bi-hand-thumbs-up" data-id="{{Hk}}"></i> Like
+    </button>
+    <button class="delete-joke" data-id="{{_id}}">remove</button>
+    {{ratings}}
+        {{/each}}
+      </ul>
+    </div>
+  </template>
+  
